@@ -19,6 +19,7 @@ class ProjectsTableSeeder extends Seeder
         for ($i = 0; $i < 100; $i++) {
             $project = new Project();
 
+            $project->type_id = rand(1, 100);
             $project->title = $faker->word();
             $project->date = $faker->dateTime();
             $project->description = $faker->paragraph();
